@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "havona-mcp"
+version = "0.1.0"
+description = "MCP server for the Havona trade finance API"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+keywords = ["mcp", "trade-finance", "blockchain", "havona", "ai-tools"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial",
+]
+dependencies = [
+    "mcp>=1.0",
+    "havona-sdk>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["python-dotenv>=1.0"]
+
+[project.scripts]
+havona-mcp = "havona_mcp.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/havona-labs/havona-mcp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["havona_mcp"]
