@@ -2,8 +2,6 @@
 
 MCP server for the [Havona](https://github.com/havona-labs) trade finance API. Connect any MCP-compatible AI assistant to live trade contracts, blockchain status, and document extraction.
 
----
-
 ## Tools
 
 | Tool | Description |
@@ -20,8 +18,6 @@ MCP server for the [Havona](https://github.com/havona-labs) trade finance API. C
 | `extract_trade_document` | Extract fields from a PDF (AI, no persistence) |
 | `graphql_query` | Raw GraphQL passthrough |
 
----
-
 ## Install
 
 ```bash
@@ -36,8 +32,6 @@ cd havona-mcp
 pip install -e .
 ```
 
----
-
 ## Configuration
 
 Copy `.env.example` to `.env`:
@@ -50,8 +44,6 @@ AUTH0_CLIENT_ID=your_client_id
 HAVONA_EMAIL=trader@yourdomain.com
 HAVONA_PASSWORD=your_password
 ```
-
----
 
 ## Claude Desktop
 
@@ -90,8 +82,6 @@ python -m havona_mcp          # stdio (default)
 python -m havona_mcp --sse    # SSE transport for web clients
 ```
 
----
-
 ## Architecture
 
 ```
@@ -106,8 +96,6 @@ Claude Desktop / Cursor
         ▼
   Havona API  →  DGraph + Confidential EVM
 ```
-
----
 
 ## License
 
